@@ -1,7 +1,3 @@
-"""
-measure_shapes_enhanced_v2_debug.py
-Versión con debug para visualizar el proceso de detección
-"""
 import cv2
 import numpy as np
 import math
@@ -10,8 +6,8 @@ import sys
 from datetime import datetime
 
 # --- CONFIG ---
-IMAGE_PATH = "cercatarjeta.jpg"
-OUTPUT_PATH = IMAGE_PATH + ".png"
+IMAGE_PATH = "cercacargador.jpg"
+OUTPUT_PATH = f"result/{IMAGE_PATH}.png"
 ARUCO_REAL_SIZE_CM = 5.0
 
 def order_points(pts):
@@ -395,7 +391,8 @@ def main():
     if results:
         fig = create_measurement_plot(work_img, results, pixels_per_cm, mode, config, aruco_corners)
         fig.savefig(OUTPUT_PATH, dpi=300, bbox_inches='tight', facecolor='white')
-        print(f"✅ [INFO] Imagen guardada en: {OUTPUT_PATH}")
+        print(f"✅ [INFO] Imagen guardada automáticamente en: {OUTPUT_PATH}")
+        plt.show()  # Mostrar ventana interactiva
     else:
         print("⚠️ [WARN] No se detectaron objetos para medir.")
 
