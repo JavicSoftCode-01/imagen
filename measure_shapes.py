@@ -9,7 +9,7 @@ from matplotlib.patches import Circle
 import string
 
 # ----------------- CONFIG -----------------
-IMAGE_PATH = "moneda.jpg"                 # <-- Cambia si tu imagen tiene otro nombre
+IMAGE_PATH = "cuadrado.jpg"                 # <-- Cambia si tu imagen tiene otro nombre
 OUTPUT_DIR = "result"
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, f"{os.path.splitext(os.path.basename(IMAGE_PATH))[0]}_result.png")
 ARUCO_REAL_SIZE_CM = 5.0                  # tamaño real del ArUco en cm (5x5 por defecto)
